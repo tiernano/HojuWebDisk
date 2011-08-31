@@ -10,7 +10,6 @@ using HojuWebDisk.WebDavServer;
 
     public class WebDavModule:IHttpModule
     {
-        public WebDavModule() { }
 
 		public void Dispose() { }
 

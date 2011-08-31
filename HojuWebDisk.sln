@@ -1,26 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/HojuWebDisk/", "http://localhost/HojuWebDisk", "{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}"
-	ProjectSection(WebsiteProperties) = preProject
-		ProjectReferences = "{ECD7683D-034A-4349-A36E-0E3880E5C62C}|HojuWebDisk.WebDavServer.dll;{DD4271D4-6200-4AA3-9B05-D452816B7781}|HojuWebDisk.BLC.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/HojuWebDisk"
-		Debug.AspNetCompiler.PhysicalPath = "HojuWebDisk.Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\HojuWebDisk\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/HojuWebDisk"
-		Release.AspNetCompiler.PhysicalPath = "HojuWebDisk.Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\HojuWebDisk\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "HojuWebDisk.Web\"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HojuWebDisk.BLC", "HojuWebDisk.BLC\HojuWebDisk.BLC.csproj", "{DD4271D4-6200-4AA3-9B05-D452816B7781}"
 EndProject
 Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "HojuWebDisk.Database", "HojuWebDisk.Database\HojuWebDisk.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
@@ -30,6 +10,27 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HojuWebDisk.DataEntities", "HojuWebDisk.DataEntities\HojuWebDisk.DataEntities.csproj", "{2A80BF99-6F1C-4E65-A35B-9EE7B9379BCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HojuWebDisk.DLC", "HojuWebDisk.DLC\HojuWebDisk.DLC.csproj", "{7E76BFB3-1E68-4A39-B2AA-8B89D9C2DD4A}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HojuWebDisk.Web", "HojuWebDisk.Web\", "{3E009E9F-E501-4F53-8B23-D62483A6E979}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{ECD7683D-034A-4349-A36E-0E3880E5C62C}|HojuWebDisk.WebDavServer.dll;{DD4271D4-6200-4AA3-9B05-D452816B7781}|HojuWebDisk.BLC.dll;{2A80BF99-6F1C-4E65-A35B-9EE7B9379BCB}|HojuWebDisk.DataEntities.dll;{7E76BFB3-1E68-4A39-B2AA-8B89D9C2DD4A}|HojuWebDisk.DLC.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/HojuWebDisk.Web"
+		Debug.AspNetCompiler.PhysicalPath = "HojuWebDisk.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\HojuWebDisk.Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/HojuWebDisk.Web"
+		Release.AspNetCompiler.PhysicalPath = "HojuWebDisk.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\HojuWebDisk.Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "14174"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,16 +42,6 @@ Global
 		Release|Mixed Platforms = Release|Mixed Platforms
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Debug|.NET.ActiveCfg = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Debug|.NET.Build.0 = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Debug|Any CPU.ActiveCfg = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Debug|Mixed Platforms.Build.0 = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Release|.NET.ActiveCfg = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Release|.NET.Build.0 = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Release|Any CPU.ActiveCfg = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
-		{C6D936C8-CFD1-4D0F-AD79-FF1AEFD0E9A8}.Release|Mixed Platforms.Build.0 = Debug|.NET
 		{DD4271D4-6200-4AA3-9B05-D452816B7781}.Debug|.NET.ActiveCfg = Debug|Any CPU
 		{DD4271D4-6200-4AA3-9B05-D452816B7781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD4271D4-6200-4AA3-9B05-D452816B7781}.Debug|Any CPU.Build.0 = Debug|Any CPU
@@ -97,6 +88,16 @@ Global
 		{7E76BFB3-1E68-4A39-B2AA-8B89D9C2DD4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E76BFB3-1E68-4A39-B2AA-8B89D9C2DD4A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7E76BFB3-1E68-4A39-B2AA-8B89D9C2DD4A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E009E9F-E501-4F53-8B23-D62483A6E979}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

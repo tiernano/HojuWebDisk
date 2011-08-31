@@ -33,3 +33,4 @@ _Execute*.txt
 error*.xml
 .metadata/
 .plugins/
+*.scc
