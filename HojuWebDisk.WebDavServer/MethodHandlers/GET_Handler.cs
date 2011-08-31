@@ -73,6 +73,10 @@ namespace HojuWebDisk.WebDavServer.MethodHandlers
                     //redirect the Get request to the pass-through or this folder. The _MWDRes will make sure the 
                     //redirected page will be handled by the ASP engine not this handler.
                     _errorxml = _httpApplication.Request.ApplicationPath + "/Folder.aspx?FPath=" + HttpUtility.UrlEncode(this._requestPath) + "&_MWDRes=1";
+                    if (_errorxml.Contains("//"))
+                    {
+                        _errorxml = _errorxml.Replace("//", "/"); //HACK!!!
+                    }
                     
                 }
                 return (int)ServerResponseCode.NotFound;
