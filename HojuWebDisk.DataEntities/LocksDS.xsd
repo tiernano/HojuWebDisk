@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LocksDS" targetNamespace="http://tempuri.org/LocksDS.xsd" xmlns:mstns="http://tempuri.org/LocksDS.xsd" xmlns="http://tempuri.org/LocksDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HojuWebDiskConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="HojuWebDiskConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HojuWebDisk.DataEntities.Properties.Settings.GlobalReference.Default.HojuWebDiskConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LocksDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="LocksDS" msprop:Generator_DataSetName="LocksDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Locks" msprop:Generator_UserTableName="Locks" msprop:Generator_RowDeletedName="LocksRowDeleted" msprop:Generator_TableClassName="LocksDataTable" msprop:Generator_RowChangedName="LocksRowChanged" msprop:Generator_RowClassName="LocksRow" msprop:Generator_RowChangingName="LocksRowChanging" msprop:Generator_RowEvArgName="LocksRowChangeEvent" msprop:Generator_RowEvHandlerName="LocksRowChangeEventHandler" msprop:Generator_TablePropName="Locks" msprop:Generator_TableVarName="tableLocks" msprop:Generator_RowDeletingName="LocksRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="ResID" msprop:Generator_UserColumnName="ResID" msprop:Generator_ColumnPropNameInRow="ResID" msprop:Generator_ColumnVarNameInTable="columnResID" msprop:Generator_ColumnPropNameInTable="ResIDColumn" type="xs:int" />
+              <xs:element name="LockType" msprop:Generator_UserColumnName="LockType" msprop:Generator_ColumnPropNameInRow="LockType" msprop:Generator_ColumnVarNameInTable="columnLockType" msprop:Generator_ColumnPropNameInTable="LockTypeColumn" type="xs:int" />
+              <xs:element name="ResType" msprop:Generator_UserColumnName="ResType" msprop:Generator_ColumnPropNameInRow="ResType" msprop:Generator_ColumnVarNameInTable="columnResType" msprop:Generator_ColumnPropNameInTable="ResTypeColumn" type="xs:int" />
+              <xs:element name="LockScope" msprop:Generator_UserColumnName="LockScope" msprop:Generator_ColumnPropNameInRow="LockScope" msprop:Generator_ColumnVarNameInTable="columnLockScope" msprop:Generator_ColumnPropNameInTable="LockScopeColumn" type="xs:int" />
+              <xs:element name="LockDepth" msprop:Generator_UserColumnName="LockDepth" msprop:Generator_ColumnPropNameInRow="LockDepth" msprop:Generator_ColumnVarNameInTable="columnLockDepth" msprop:Generator_ColumnPropNameInTable="LockDepthColumn" type="xs:int" />
+              <xs:element name="LockOwner" msprop:Generator_UserColumnName="LockOwner" msprop:Generator_ColumnPropNameInRow="LockOwner" msprop:Generator_ColumnVarNameInTable="columnLockOwner" msprop:Generator_ColumnPropNameInTable="LockOwnerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LockOwnerType" msprop:Generator_UserColumnName="LockOwnerType" msprop:Generator_ColumnPropNameInRow="LockOwnerType" msprop:Generator_ColumnVarNameInTable="columnLockOwnerType" msprop:Generator_ColumnPropNameInTable="LockOwnerTypeColumn" type="xs:int" />
+              <xs:element name="Timeout" msprop:Generator_UserColumnName="Timeout" msprop:Generator_ColumnPropNameInRow="Timeout" msprop:Generator_ColumnVarNameInTable="columnTimeout" msprop:Generator_ColumnPropNameInTable="TimeoutColumn" type="xs:int" />
+              <xs:element name="update_date_stamp" msprop:Generator_UserColumnName="update_date_stamp" msprop:Generator_ColumnPropNameInRow="update_date_stamp" msprop:Generator_ColumnVarNameInTable="columnupdate_date_stamp" msprop:Generator_ColumnPropNameInTable="update_date_stampColumn" type="xs:dateTime" />
+              <xs:element name="update_user_stamp" msprop:Generator_UserColumnName="update_user_stamp" msprop:Generator_ColumnPropNameInRow="update_user_stamp" msprop:Generator_ColumnVarNameInTable="columnupdate_user_stamp" msprop:Generator_ColumnPropNameInTable="update_user_stampColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="create_date_stamp" msprop:Generator_UserColumnName="create_date_stamp" msprop:Generator_ColumnPropNameInRow="create_date_stamp" msprop:Generator_ColumnVarNameInTable="columncreate_date_stamp" msprop:Generator_ColumnPropNameInTable="create_date_stampColumn" type="xs:dateTime" />
+              <xs:element name="create_user_stamp" msprop:Generator_UserColumnName="create_user_stamp" msprop:Generator_ColumnPropNameInRow="create_user_stamp" msprop:Generator_ColumnVarNameInTable="columncreate_user_stamp" msprop:Generator_ColumnPropNameInTable="create_user_stampColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="update_seq_stamp" msprop:Generator_UserColumnName="update_seq_stamp" msprop:Generator_ColumnPropNameInRow="update_seq_stamp" msprop:Generator_ColumnVarNameInTable="columnupdate_seq_stamp" msprop:Generator_ColumnPropNameInTable="update_seq_stampColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Locks" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

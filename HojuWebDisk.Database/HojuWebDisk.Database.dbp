@@ -1,0 +1,9 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "MyWebDisk.Database"
+   MSDTVersion = "80"
+   Begin Folder = "Create Scripts"
+      Script = "Create.sql"
+   End
+   Begin DBRefFolder = "Database References"
+   End
+End

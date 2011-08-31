@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccessDS" targetNamespace="http://tempuri.org/AccessDS.xsd" xmlns:mstns="http://tempuri.org/AccessDS.xsd" xmlns="http://tempuri.org/AccessDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WebDavConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="WebDavConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HojuWebDisk.DataEntities.Properties.Settings.GlobalReference.Default.WebDavConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccessDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AccessDS" msprop:Generator_DataSetName="AccessDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Access" msprop:Generator_UserTableName="Access" msprop:Generator_RowDeletedName="AccessRowDeleted" msprop:Generator_TableClassName="AccessDataTable" msprop:Generator_RowChangedName="AccessRowChanged" msprop:Generator_RowClassName="AccessRow" msprop:Generator_RowChangingName="AccessRowChanging" msprop:Generator_RowEvArgName="AccessRowChangeEvent" msprop:Generator_RowEvHandlerName="AccessRowChangeEventHandler" msprop:Generator_TablePropName="Access" msprop:Generator_TableVarName="tableAccess" msprop:Generator_RowDeletingName="AccessRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="FolderID" msprop:Generator_UserColumnName="FolderID" msprop:Generator_ColumnPropNameInRow="FolderID" msprop:Generator_ColumnVarNameInTable="columnFolderID" msprop:Generator_ColumnPropNameInTable="FolderIDColumn" type="xs:int" />
+              <xs:element name="UID" msprop:Generator_UserColumnName="UID" msprop:Generator_ColumnPropNameInRow="UID" msprop:Generator_ColumnVarNameInTable="columnUID" msprop:Generator_ColumnPropNameInTable="UIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Access" msprop:Generator_UserColumnName="Access" msprop:Generator_ColumnPropNameInRow="Access" msprop:Generator_ColumnVarNameInTable="columnAccess" msprop:Generator_ColumnPropNameInTable="AccessColumn" type="xs:int" />
+              <xs:element name="update_date_stamp" msprop:Generator_UserColumnName="update_date_stamp" msprop:Generator_ColumnPropNameInRow="update_date_stamp" msprop:Generator_ColumnVarNameInTable="columnupdate_date_stamp" msprop:Generator_ColumnPropNameInTable="update_date_stampColumn" type="xs:dateTime" />
+              <xs:element name="update_user_stamp" msprop:Generator_UserColumnName="update_user_stamp" msprop:Generator_ColumnPropNameInRow="update_user_stamp" msprop:Generator_ColumnVarNameInTable="columnupdate_user_stamp" msprop:Generator_ColumnPropNameInTable="update_user_stampColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="create_date_stamp" msprop:Generator_UserColumnName="create_date_stamp" msprop:Generator_ColumnPropNameInRow="create_date_stamp" msprop:Generator_ColumnVarNameInTable="columncreate_date_stamp" msprop:Generator_ColumnPropNameInTable="create_date_stampColumn" type="xs:dateTime" />
+              <xs:element name="create_user_stamp" msprop:Generator_UserColumnName="create_user_stamp" msprop:Generator_ColumnPropNameInRow="create_user_stamp" msprop:Generator_ColumnVarNameInTable="columncreate_user_stamp" msprop:Generator_ColumnPropNameInTable="create_user_stampColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="update_seq_stamp" msprop:Generator_UserColumnName="update_seq_stamp" msprop:Generator_ColumnPropNameInRow="update_seq_stamp" msprop:Generator_ColumnVarNameInTable="columnupdate_seq_stamp" msprop:Generator_ColumnPropNameInTable="update_seq_stampColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Access" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
