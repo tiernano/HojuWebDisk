@@ -46,5 +46,7 @@
         </p>
     </div>
     </form>
+    <p>
+        Source Code available at <a href="https://github.com/tiernano/HojuWebDisk">GitHub</a>. Please post issues to <a href="https://github.com/tiernano/HojuWebDisk/issues">GitHub Issues page</a></p>
 </body>
 </html>

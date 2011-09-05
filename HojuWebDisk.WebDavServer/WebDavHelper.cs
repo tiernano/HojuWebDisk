@@ -556,7 +556,7 @@ namespace HojuWebDisk.WebDavServer
             string _retval = "<HTML><HEAD>";
             _retval += "<TITLE>Resource Error</TITLE>\r\n";
             _retval += "\r\n<STYLE>.Error{font-size:9pt;font-family:'trebuchet ms',helvetica,sans-serif;}</STYLE>\r\n";
-            _retval += "</HEAD>\r\n<BODY>\r\n<H3 class=\"Error\">" + msg + "</h3>\r\n";
+            _retval += String.Format("</HEAD>\r\n<BODY>\r\n<H3 class=\"Error\">{0}</h3>\r\n", msg);
             _retval += "</BODY></HTML>";
             return _retval;
         }
@@ -567,7 +567,7 @@ namespace HojuWebDisk.WebDavServer
             string _retval = "<HTML><HEAD>";
             _retval += "<TITLE>WebDav Server</TITLE>\r\n";
             _retval += "\r\n<STYLE>.Error{font-size:9pt;font-family:'trebuchet ms',helvetica,sans-serif;}</STYLE>\r\n";
-            _retval += "</HEAD>\r\n<BODY>\r\n<H3 class=\"Error\">" + msg + "</h3>\r\n";
+            _retval += String.Format("</HEAD>\r\n<BODY>\r\n<H3 class=\"Error\">{0}</h3>\r\n", msg);
             _retval += "</BODY></HTML>";
             return _retval;
 

@@ -1,17 +1,9 @@
 using System;
-using System.Data;
-using System.Configuration;
-using System.Collections;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-
 using HojuWebDisk.BLC;
 using HojuWebDisk.DataEntities;
 using HojuWebDisk.WebDavServer;
+using System.Web.UI.WebControls;
 
 public partial class Folder : System.Web.UI.Page
 {
@@ -50,13 +42,13 @@ public partial class Folder : System.Web.UI.Page
             ResourceGridView.DataBind();
             
         }
-        Page.Title = "HojuWebDisk:/" + _FPath + _sa;
-        FolderUp.Text = "<table width=100% border=0 cellpadding=2 cellspacing=2><tr valign=top><td width=35px><img src=\"./Images/WebDrive.jpg?_MWDRes=1\"></td><td><h3>HojuWebDisk:/" + _FPath + _sa + "</h3></td></tr>";
+        Page.Title = String.Format("HojuWebDisk:/{0}{1}", _FPath, _sa);
+        FolderUp.Text = String.Format("<table width=100% border=0 cellpadding=2 cellspacing=2><tr valign=top><td width=35px><img src=\"./Images/WebDrive.jpg?_MWDRes=1\"></td><td><h3>HojuWebDisk:/{0}{1}</h3></td></tr>", _FPath, _sa);
 
         if (_dirInfo.ParentID != 0)
         {
-            FolderUp.Text += "<tr valign=middle><td width=35px><a href=\"Folder.aspx?FPath=" + WebDavHelper.getParentResourcePath(_FPath, 1) + "&_MWDRes=1\"><img src=\"./Images/FolderUp.jpg?_MWDRes=1\" border=0></a></td>";
-            FolderUp.Text += "<td><a href=\"Folder.aspx?FPath=" + WebDavHelper.getParentResourcePath(_FPath, 1) + "&_MWDRes=1\">[Parent Folder]</a></td></tr>";
+            FolderUp.Text += String.Format("<tr valign=middle><td width=35px><a href=\"Folder.aspx?FPath={0}&_MWDRes=1\"><img src=\"./Images/FolderUp.jpg?_MWDRes=1\" border=0></a></td>", WebDavHelper.getParentResourcePath(_FPath, 1));
+            FolderUp.Text += String.Format("<td><a href=\"Folder.aspx?FPath={0}&_MWDRes=1\">[Parent Folder]</a></td></tr>", WebDavHelper.getParentResourcePath(_FPath, 1));
         }
         FolderUp.Text += "</table>";
 
@@ -70,8 +62,8 @@ public partial class Folder : System.Web.UI.Page
         {
             string _FileName = Convert.ToString(e.Row.Cells[0].Text);
             Int64 _FileSize = (Int64)DataBinder.Eval(e.Row.DataItem, "FileDataSize");
-            e.Row.Cells[0].Text = "<a href=\"" + _FPath + _sa + _FileName + "\"><img border=\"0\" src=\"./images/" + getAttimg(_FileName) + "?_MWDRes=1\"></a>";
-            e.Row.Cells[1].Text = "<a href=\"" + _FPath + _sa + _FileName + "\">" + _FileName + " (" + FormatFileSize(_FileSize) + ")</a>";
+            e.Row.Cells[0].Text = String.Format("<a href=\"{0}{1}{2}\"><img border=\"0\" src=\"./images/{3}?_MWDRes=1\"></a>", _FPath, _sa, _FileName, getAttimg(_FileName));
+            e.Row.Cells[1].Text = String.Format("<a href=\"{0}{1}{2}\">{2} ({3})</a>", _FPath, _sa, _FileName, FormatFileSize(_FileSize));
 
         }
     }
@@ -80,11 +72,9 @@ public partial class Folder : System.Web.UI.Page
         
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            
-            e.Row.Cells[0].Text = "<a href=\"Folder.aspx?FPath=" + _FPath + _sa + Convert.ToString(DataBinder.Eval(e.Row.DataItem, "FolderName"))
-                + "&_MWDRes=1\"><img src=\"./Images/Folder.jpg?_MWDRes=1\" border=0></a>";
-            e.Row.Cells[1].Text = "<a href=\"Folder.aspx?FPath=" + _FPath + _sa + Convert.ToString(DataBinder.Eval(e.Row.DataItem, "FolderName"))
-                            + "&_MWDRes=1\">" + e.Row.Cells[1].Text.ToString() + "</a>";
+
+            e.Row.Cells[0].Text = String.Format("<a href=\"Folder.aspx?FPath={0}{1}{2}&_MWDRes=1\"><img src=\"./Images/Folder.jpg?_MWDRes=1\" border=0></a>", _FPath, _sa, Convert.ToString(DataBinder.Eval(e.Row.DataItem, "FolderName")));
+            e.Row.Cells[1].Text = String.Format("<a href=\"Folder.aspx?FPath={0}{1}{2}&_MWDRes=1\">{3}</a>", _FPath, _sa, Convert.ToString(DataBinder.Eval(e.Row.DataItem, "FolderName")), e.Row.Cells[1].Text);
 
 
         }
@@ -149,7 +139,7 @@ public partial class Folder : System.Web.UI.Page
 
         if (FS < 1000)
         {
-            return FS.ToString() + " Bytes";
+            return FS + " Bytes";
         }
 
         if (FS < 1048576)
