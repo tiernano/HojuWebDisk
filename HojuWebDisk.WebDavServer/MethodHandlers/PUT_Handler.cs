@@ -86,13 +86,13 @@ namespace HojuWebDisk.WebDavServer.MethodHandlers
         }
         private byte[] GetRequestInput()
         {
-            StreamReader _inputStream = new StreamReader(_httpApplication.Request.InputStream);
-
-            long _inputSize = _inputStream.BaseStream.Length;
-
-            byte[] _inputBytes = new byte[_inputSize];
-            _inputStream.BaseStream.Read(_inputBytes, 0, (int)_inputSize);
-            return _inputBytes;
+            using (StreamReader _inputStream = new StreamReader(_httpApplication.Request.InputStream))
+            {
+                long _inputSize = _inputStream.BaseStream.Length;
+                byte[] _inputBytes = new byte[_inputSize];
+                _inputStream.BaseStream.Read(_inputBytes, 0, (int)_inputSize);
+                return _inputBytes;
+            }
         }
         private int SaveFile(int PID)
         {

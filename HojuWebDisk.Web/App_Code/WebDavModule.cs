@@ -15,7 +15,8 @@ using HojuWebDisk.WebDavServer;
 
 		public void Init(HttpApplication httpApp) {
 			//TODO: add digest / basic authentication capabilities
-			httpApp.AuthenticateRequest += new EventHandler(httpApp_AuthenticateRequest);
+            
+            httpApp.AuthenticateRequest += httpApp_AuthenticateRequest;
             
 		}
 
